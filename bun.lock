@@ -5,6 +5,8 @@
     "": {
       "name": "tanstack_start_ts",
       "dependencies": {
+        "@ai-sdk/openai-compatible": "^2.0.50",
+        "@ai-sdk/react": "^3.0.207",
         "@hookform/resolvers": "^5.2.2",
         "@lovable.dev/cloud-auth-js": "^1.1.2",
         "@radix-ui/react-accordion": "^1.2.12",
@@ -93,9 +95,13 @@
   "packages": {
     "@ai-sdk/gateway": ["@ai-sdk/gateway@3.0.131", "https://europe-west1-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@ai-sdk/gateway/-/gateway-3.0.131.tgz", { "dependencies": { "@ai-sdk/provider": "3.0.10", "@ai-sdk/provider-utils": "4.0.29", "@vercel/oidc": "3.2.0" }, "peerDependencies": { "zod": "^3.25.76 || ^4.1.8" } }, "sha512-CnjOZdywQaUnCyZ0N5wVNm7Sm63+NeHDVZQJKFX2IDq+t03SLwiiuoi3ILTLPlM+YSOhkQ/pvIDoR4qa98Zp5A=="],
 
+    "@ai-sdk/openai-compatible": ["@ai-sdk/openai-compatible@2.0.50", "https://europe-west4-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@ai-sdk/openai-compatible/-/openai-compatible-2.0.50.tgz", { "dependencies": { "@ai-sdk/provider": "3.0.10", "@ai-sdk/provider-utils": "4.0.29" }, "peerDependencies": { "zod": "^3.25.76 || ^4.1.8" } }, "sha512-HyuxddF2Yv5G8qxK/0uksAINjQ4h6TpwOqHuqzsCM0u78/JWAW2OXcIplQeB44PIAORgPjbMzrw9DhnPYHMskA=="],
+
     "@ai-sdk/provider": ["@ai-sdk/provider@3.0.10", "https://europe-west1-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@ai-sdk/provider/-/provider-3.0.10.tgz", { "dependencies": { "json-schema": "^0.4.0" } }, "sha512-Q3BZ27qfpYqnCYGvE3vt+Qi6LGOF9R5Nmzn+9JoM1lCRsD9mYaIhfJLkSunN48nfGXJ6n+XNV0J/XVpqGQl7Dw=="],
 
     "@ai-sdk/provider-utils": ["@ai-sdk/provider-utils@4.0.29", "https://europe-west1-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@ai-sdk/provider-utils/-/provider-utils-4.0.29.tgz", { "dependencies": { "@ai-sdk/provider": "3.0.10", "@standard-schema/spec": "^1.1.0", "eventsource-parser": "^3.0.8" }, "peerDependencies": { "zod": "^3.25.76 || ^4.1.8" } }, "sha512-uhukHaCBvqkwBHkT8C2PrnqKTCoLn3pdHXqtcR9I8ErH+flbzgW4o7VHSNIup9LRu+WBvZIZDQLsx6rwl2tiOA=="],
+
+    "@ai-sdk/react": ["@ai-sdk/react@3.0.207", "https://europe-west4-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/@ai-sdk/react/-/react-3.0.207.tgz", { "dependencies": { "@ai-sdk/provider-utils": "4.0.29", "ai": "6.0.205", "swr": "^2.2.5", "throttleit": "2.1.0" }, "peerDependencies": { "react": "^18 || ~19.0.1 || ~19.1.2 || ^19.2.1" } }, "sha512-/wlJv214OQIqUDvoEFO4pqGYCmcXUJMEPcPc+1w2pQhf86onLv7My2+KlsKdK9XGATlI3hHpYaB3MbrpvLDzbQ=="],
 
     "@alloc/quick-lru": ["@alloc/quick-lru@5.2.0", "", {}, "sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw=="],
 
@@ -1555,6 +1561,8 @@
 
     "supports-preserve-symlinks-flag": ["supports-preserve-symlinks-flag@1.0.0", "", {}, "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="],
 
+    "swr": ["swr@2.4.1", "https://europe-west4-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/swr/-/swr-2.4.1.tgz", { "dependencies": { "dequal": "^2.0.3", "use-sync-external-store": "^1.6.0" }, "peerDependencies": { "react": "^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0" } }, "sha512-2CC6CiKQtEwaEeNiqWTAw9PGykW8SR5zZX8MZk6TeAvEAnVS7Visz8WzphqgtQ8v2xz/4Q5K+j+SeMaKXeeQIA=="],
+
     "synckit": ["synckit@0.11.12", "", { "dependencies": { "@pkgr/core": "^0.2.9" } }, "sha512-Bh7QjT8/SuKUIfObSXNHNSK6WHo6J1tHCqJsuaFDP7gP0fkzSfTxI8y85JrppZ0h8l0maIgc2tfuZQ6/t3GtnQ=="],
 
     "tailwind-merge": ["tailwind-merge@3.5.0", "", {}, "sha512-I8K9wewnVDkL1NTGoqWmVEIlUcB9gFriAEkXkfCjX5ib8ezGxtR3xD7iZIxrfArjEsH7F1CHD4RFUtxefdqV/A=="],
@@ -1566,6 +1574,8 @@
     "thenify": ["thenify@3.3.1", "", { "dependencies": { "any-promise": "^1.0.0" } }, "sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw=="],
 
     "thenify-all": ["thenify-all@1.6.0", "", { "dependencies": { "thenify": ">= 3.1.0 < 4" } }, "sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA=="],
+
+    "throttleit": ["throttleit@2.1.0", "https://europe-west4-npm.pkg.dev/lovable-core-prod/sandbox-npm-cache/throttleit/-/throttleit-2.1.0.tgz", {}, "sha512-nt6AMGKW1p/70DF/hGBdJB57B8Tspmbp5gfJ8ilhLnt7kkr2ye7hzD6NVG8GGErk2HWF34igrL2CXmNIkzKqKw=="],
 
     "tiny-invariant": ["tiny-invariant@1.3.3", "", {}, "sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg=="],
 
