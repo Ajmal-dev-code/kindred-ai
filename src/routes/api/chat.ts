@@ -80,7 +80,7 @@ export const Route = createFileRoute("/api/chat")({
         const result = streamText({
           model: gateway("google/gemini-3-flash-preview"),
           system: SOLACE_SYSTEM_PROMPT,
-          messages: convertToModelMessages(messages),
+          messages: await convertToModelMessages(messages),
           onFinish: async ({ text }) => {
             if (text?.trim()) {
               await supabase.from("messages").insert({
