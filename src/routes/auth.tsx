@@ -37,13 +37,17 @@ function AuthPage() {
     setLoading(true);
     try {
       if (mode === "signup") {
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
           email,
           password,
           options: { emailRedirectTo: window.location.origin + "/chat" },
         });
         if (error) throw error;
-        toast.success("Check your email to confirm your account.");
+        if (data.session) {
+          navigate({ to: "/chat" });
+        } else {
+          toast.success("Check your email to confirm your account.");
+        }
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
