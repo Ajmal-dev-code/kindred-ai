@@ -35,7 +35,6 @@ function AuthPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    console.log("[auth] submit start, mode=", mode);
     try {
       if (mode === "signup") {
         const { data, error } = await supabase.auth.signUp({
@@ -43,20 +42,17 @@ function AuthPage() {
           password,
           options: { emailRedirectTo: window.location.origin + "/chat" },
         });
-        console.log("[auth] signup result", { hasSession: !!data?.session, hasUser: !!data?.user, error });
         if (error) throw error;
         // With auto-confirm enabled, signUp returns a session immediately.
         // Otherwise fall back to signing in (covers the case where Supabase
         // returns user without an attached session object).
         if (!data.session) {
           const { error: signInErr } = await supabase.auth.signInWithPassword({ email, password });
-          console.log("[auth] post-signup signin err", signInErr);
           if (signInErr) {
             toast.success("Check your email to confirm your account.");
             return;
           }
         }
-        console.log("[auth] navigating to /chat");
         navigate({ to: "/chat" });
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
